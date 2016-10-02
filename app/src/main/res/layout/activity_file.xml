@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent" android:layout_height="fill_parent"
+android:orientation="vertical">
+
+<TextView android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Reading and Writing to External Storage"
+    android:textSize="24sp"/>
+
+<EditText android:id="@+id/Filetext"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10" android:lines="5"
+    android:minLines="3" android:gravity="top|left"
+    android:inputType="textMultiLine">
+
+    <requestFocus />
+</EditText>
+
+<LinearLayout
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="1.0"
+    android:layout_marginTop="20dp">
+
+    <Button android:id="@+id/saveInternalStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save file internal"
+        android:onClick="filewrite"
+        android:layout_weight="0.5"/>
+
+    <Button android:id="@+id/getInternalStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="fileread"
+        android:layout_weight="0.5"
+        android:text="Read file internal" />
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.0"
+        android:layout_marginTop="30dp">
+        <Button android:id="@+id/saveExternalStorage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="extwrite"
+            android:layout_weight="0.5"
+            android:text="Save file external(private)" />
+
+        <Button android:id="@+id/getExternalStorage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="extread"
+            android:layout_weight="0.5"
+            android:text="Read file external(private)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.0"
+        android:layout_marginTop="40dp">
+        <Button android:id="@+id/savePublicStorage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="pubwrite"
+            android:layout_weight="0.5"
+            android:text="Save file external(public)" />
+
+        <Button android:id="@+id/getPublicStorage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="pubread"
+            android:layout_weight="0.5"
+            android:text="Read file external(public)" />
+    </LinearLayout>
+
+
+</LinearLayout>
